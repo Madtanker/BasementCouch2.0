@@ -112,7 +112,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
+        $.get('https://rawgit.com/Madtanker/BasementCouch2.0/master/lang/langIndex.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -246,33 +246,33 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.11.0',
+        version: '2.0',
         status: false,
-        name: 'basicBot',
+        name: 'BasementCouch',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
-        cmdLink: 'http://git.io/245Ppg',
-        chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
+        scriptLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/basicBot.js',
+        cmdLink: 'https://git.io/v5pmG',
+        chatLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/lang/en.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'basicBot',
+            botName: 'BasementCouch',
             language: 'english',
-            chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
-            scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+            chatLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/lang/en.json',
+            scriptLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 1, // 1-200
+            startupCap: 200, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
-            autowoot: true,
-            autoskip: false,
+            startupEmoji: true, // true or false
+            autowoot: false,
+            autoskip: true,
             smartSkip: true,
             cmdDeletion: true,
             maximumAfk: 120,
-            afkRemoval: true,
-            maximumDc: 60,
+            afkRemoval: false,
+            maximumDc: 30,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
@@ -280,17 +280,17 @@
             maximumLocktime: 10,
             cycleGuard: true,
             maximumCycletime: 10,
-            voteSkip: false,
-            voteSkipLimit: 10,
-            historySkip: false,
+            voteSkip: true,
+            voteSkipLimit: 4,
+            historySkip: true,
             timeGuard: true,
             maximumSongLength: 10,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            thorCommand: false,
+            thorCommand: true,
             thorCooldown: 10,
-            skipPosition: 3,
+            skipPosition: 1,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
                 ['op', 'This song is on the OP list. '],
@@ -301,22 +301,55 @@
                 ['unavailable', 'The song you played was not available for some users. ']
             ],
             afkpositionCheck: 15,
-            afkRankCheck: 'ambassador',
+            afkRankCheck: 'user',
             motdEnabled: false,
             motdInterval: 5,
-            motd: 'Temporary Message of the Day',
+            motd: 'Welcome to the EDM Basement! We play Electronic Dance Music (EDM), Techno, House, Chill, Funk, Dubstep, Drum and Bass, Etc. Sorry, NO Hardstyle or Hardcore. http://www.theedmbasement.com/ ',
             filterChat: true,
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: null,
+            rulesLink: 'http://www.theedmbasement.com/',
             themeLink: null,
-            fbLink: null,
+            fbLink: 'https://www.facebook.com/TheEDMBasement',
             youtubeLink: null,
-            website: null,
-            intervalMessages: [],
+            website: 'http://www.theedmbasement.com/',
+            intervalMessages: [
+                            "Fun Fact: When possums are playing ‘possum’, they are not \“playing.\” They actually pass out from sheer terror. ",
+                            "Fun Fact: Plug.dj was first released on February 29th, \"a leap day\".",
+                            "Please remember to WOOT/MEH while in the Waitlist.",
+                            "Fun Fact: Most people yawn wher they read the word \"yawn\" or \"yawning\". \:trollface\:",
+                            "Fun Fact: North Korea uses a fax machine to send threats to South Korea.",
+                            "Fun Fact: It took the inventor of the Rubik’s cube one month before he was able to solve the Cube for himself.",
+                            "If you accidently disconnect you can type \"!dc\" to get your spot in the waitlist back.",
+                            "Fun Fact: Sea otters hold hands when they sleep to keep from drifting apart.",
+                            "Fun Fact: When you were born, you were, for a moment, the youngest person on earth.",
+                            "Fun Fact: The elements that we are composed of were formed in the interiors of collapsing stars. We are all made of star dust.",
+                            "Fun Fact: Cows have best friends.",
+                            "Fun Fact: Turtles can breathe through their butts.",
+                            "Fun Fact: Norway knighted a penguin.",
+                            "Fun Fact: In China, killing a Panda is punishable by death.",
+                            "Fun Fact: Houseflies don’t allow their short lifespans (14 days) to hinder their musical abilities. They always hum in the key of F.",
+                            "Fun Fact: If you lift a kangaroo’s tail off the ground, it can’t hop.",
+                            "Fun Fact: Fleas can jump up to 200 times their height. This is equivalent to a man jumping the Empire State Building in New York.",
+                            "Fun Fact: There are one million ants for every human in the world.",
+                            "Fun Fact: Ants never sleep and don’t have lungs",
+                            "Fun Fact: Elephants are one of the three mammals that undergo menopause – the other two being humpback whales and human females.",
+                            "Fun Fact: Dogs’ nose prints are as unique as human fingerprints and can be used to identify them.",
+                            "Fun Fact: The Hawaiian alphabet has only 12 letters.",
+                            "Fun Fact: A donkey can sink into quicksand but a mule can’t.",
+                            "Fun Fact: The words \"facetious\" and \"abstemious\" contain all the vowels in their correct order.",
+                            "Fun Fact: The \"Sixth Sick Sheik’s Sixth Sheep’s Sick\" is the hardest tongue-twister.",
+                            "Fun Fact: Albert Einstein never wore any socks.",
+                            "Fun Fact: A flamingo can eat only when its head is upside down.",
+                            "Fun Fact: It is physically impossible for pigs to look up at the sky.",
+                            "Fun Fact: The shortest war on record, between Britain and Zanzibar in 1896, lasted just 38 minutes.",
+                            "Fun Fact: An octopus has 3 hearts.",
+                            "Fun Fact: If the population of China walked past you in single file, the line would never end because of the rate of reproduction.",
+                            "Fun Fact:\"Typewriter\" is the longest word that can be made only using one row on the keyboard."
+                            ],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: '!',
             blacklists: {
                 NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
@@ -2749,12 +2782,12 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
+                        $.get('https://rawgit.com/Madtanker/BasementCouch2.0/master/lang/langIndex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
                                 API.sendChat(subChat(basicBot.chat.langerror, {
-                                    link: 'http://git.io/vJ9nI'
+                                    link: 'https://git.io/vofY5'
                                 }));
                             } else {
                                 basicBot.settings.language = argument;
