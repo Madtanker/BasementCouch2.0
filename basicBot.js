@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0',
+        version: '2.0.1',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
