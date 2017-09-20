@@ -243,7 +243,6 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
         version: '2.0.1',
@@ -300,7 +299,7 @@
                 ['nsfw', 'The song you contained was NSFW (image or sound). '],
                 ['unavailable', 'The song you played was not available for some users. ']
             ],
-            afkpositionCheck: 15,
+            afkpositionCheck: 3,
             afkRankCheck: 'user',
             motdEnabled: false,
             motdInterval: 5,
