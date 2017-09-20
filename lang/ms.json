@@ -90,7 +90,7 @@
     "askskip": "\/me @%%NAME%%, Jangan meminta untuk melangkau.",
     "spam": "\/me @%%NAME%%, sila jangan spam.",
     "roomadvertising": "\/me @%%NAME%%, sila jangan pos link ke bilik-bilik lain.",
-    "adfly": "\/me @%%NAME%%, sila tukar autowoot program anda. Kami mencadangkan Plugcubed: http:\/\/plugcubed.net",
+    "adfly": "\/me @%%NAME%%, sila tukar autowoot program anda. Kami mencadangkan RCS: http:\/\/rcs.radiant.dj\/ ,PlugCubed: http:\/\/plugcubed.net\/ , TastyPlug: http\/\/tastyplug.tastycat.org\/",
     "validgiftags": "/me [@%%NAME%%] [Tag: %%TAGS%%] http://i.giphy.com/%%ID%%.gif",
     "invalidgiftags": "/me [@%%NAME%%] [Tag: %%TAGS%%] tag yang tidak sah, sila cuba yang lain.",
     "validgifrandom": "\/me [@%%NAME%%] [Random GIF] http:\/\/i.giphy.com\/%%ID%%.gif",

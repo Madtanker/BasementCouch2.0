@@ -90,7 +90,7 @@
     "askskip": "\/me @%%NAME%%, nepra\u0161in\u0117k kad skip'int\u0173 dain\u0105.",
     "spam": "\/me @%%NAME%%, pra\u0161au, nespamink.",
     "roomadvertising": "\/me @%%NAME%%, nereklamuok kit\u0173 kambari\u0173, pra\u0161au.",
-    "adfly": "\/me @%%NAME%%, pra\u0161au pakeisk savo autowoot program\u0105. Si\u016blau tau PlugCubed: http:\/\/plugcubed.net\/",
+    "adfly": "\/me @%%NAME%%, pra\u0161au pakeisk savo autowoot program\u0105. Si\u016blau tau RCS: http:\/\/rcs.radiant.dj\/ ,PlugCubed: http:\/\/plugcubed.net\/ , TastyPlug: http\/\/tastyplug.tastycat.org\/",
     "validgiftags": "/me [@%%NAME%%] [Tagai: %%TAGS%%] http://i.giphy.com/%%ID%%.gif",
     "invalidgiftags": "/me [@%%NAME%%] [Tagai: %%TAGS%%] Klaidingi tagai, bandyk kažką kitą.",
     "validgifrandom": "\/me [@%%NAME%%] [Random GIF] http:\/\/i.giphy.com\/%%ID%%.gif",
