@@ -352,9 +352,9 @@
             songstats: false,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/blacklists/OPlist.json',
+                BANNED: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
