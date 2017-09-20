@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.2',
+        version: '2.0.3',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -1049,7 +1049,7 @@
             basicBot.room.currentDJID = obj.dj.id;
 
             var blacklistSkip = setTimeout(function() {
-                console.log(obj.media)
+                console.log(obj.media);
                 var mid = obj.media.format + ':' + obj.media.cid;
                 for (var bl in basicBot.room.blacklists) {
                     if (basicBot.settings.blacklistEnabled) {
