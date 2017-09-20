@@ -1049,6 +1049,7 @@
             basicBot.room.currentDJID = obj.dj.id;
 
             var blacklistSkip = setTimeout(function() {
+                console.log(obj.media)
                 var mid = obj.media.format + ':' + obj.media.cid;
                 for (var bl in basicBot.room.blacklists) {
                     if (basicBot.settings.blacklistEnabled) {
