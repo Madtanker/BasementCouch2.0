@@ -827,11 +827,11 @@
                     var msg;
                     if (basicBot.settings.motdEnabled) {
                         msg = basicBot.settings.motd;
-                    } else {
-                        if (basicBot.settings.intervalMessages.length === 0) return void(0);
-                        var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
-                        msg = basicBot.settings.intervalMessages[messageNumber];
-                    }
+                    } //else {
+                        //if (basicBot.settings.intervalMessages.length === 0) return void(0);
+                        //var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
+                        //msg = basicBot.settings.intervalMessages[messageNumber];
+                    //}
                     API.sendChat('/me ' + msg);
                 }
             },
@@ -1049,7 +1049,7 @@
             basicBot.room.currentDJID = obj.dj.id;
 
             var blacklistSkip = setTimeout(function() {
-                console.log(obj.media);
+                //console.log(obj.media);
                 var mid = obj.media.format + ':' + obj.media.cid;
                 for (var bl in basicBot.room.blacklists) {
                     if (basicBot.settings.blacklistEnabled) {
