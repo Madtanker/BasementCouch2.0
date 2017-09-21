@@ -827,12 +827,13 @@
                     var msg;
                     if (basicBot.settings.motdEnabled) {
                         msg = basicBot.settings.motd;
+                        API.sendChat('/me ' + msg);
                     } //else {
                         //if (basicBot.settings.intervalMessages.length === 0) return void(0);
                         //var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
                         //msg = basicBot.settings.intervalMessages[messageNumber];
                     //}
-                    API.sendChat('/me ' + msg);
+                    
                 }
             },
             updateBlacklists: function() {
