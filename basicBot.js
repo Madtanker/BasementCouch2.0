@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.3',
+        version: '2.0.4',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -266,7 +266,7 @@
             startupCap: 200, // 1-200
             startupVolume: 0, // 0-100
             startupEmoji: true, // true or false
-            autowoot: true,
+            autowoot: false,
             autoskip: true,
             smartSkip: true,
             cmdDeletion: true,
@@ -290,7 +290,7 @@
             usercommandsEnabled: true,
             thorCommand: true,
             thorCooldown: 10,
-            skipPosition: 1,
+            skipPosition: null,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
                 ['op', 'This song is on the OP list. '],
@@ -1012,9 +1012,9 @@
             }
         },
         eventDjadvance: function(obj) {
-            if (basicBot.settings.autowoot) {
-                $('#woot').click(); // autowoot
-            }
+            //if (basicBot.settings.autowoot) {
+               // $('#woot').click(); // autowoot
+            //}
 
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
             for (var i = 0; i < basicBot.room.users.length; i++) {
