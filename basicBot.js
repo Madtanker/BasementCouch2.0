@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.6',
+        version: '2.0.7',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -1525,10 +1525,7 @@
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
             //socket();
-            loadChat(API.chatLog(basicBot.chat.online, {
-                botname: basicBot.settings.botName,
-                version: basicBot.version
-            }));
+            loadChat(API.chatLog(basicBot.chat.online + basicBot.settings.botName + basicBot.version));
         },
 
 /*
