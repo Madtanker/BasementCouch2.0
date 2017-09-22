@@ -264,7 +264,7 @@
             scriptLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 200, // 1-200
-            startupVolume: null, // 0-100
+            startupVolume: 0, // 0-100
             startupEmoji: true, // true or false
             autowoot: false,
             autoskip: true,
