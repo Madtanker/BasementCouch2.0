@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.4',
+        version: '2.0.5',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -3689,7 +3689,7 @@
                     else {
                         if (typeof basicBot.settings.themeLink === 'string')
                             API.sendChat(subChat(basicBot.chat.genres, {
-                                link: basicBot.settings.themeLink
+                                //link: basicBot.settings.themeLink
                             }));
                     }
                 }
