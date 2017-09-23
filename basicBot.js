@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209, 3532061];
 
     var basicBot = {
-        version: '2.0.0',
+        version: '2.0.1',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -1218,7 +1218,7 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            if (msg === 'skip', 'skip please', 'skip pls') {
+            if (msg === 'skip'){
                 API.sendChat(subChat(basicBot.chat.askskip, {
                     name: chat.un
                 }));
