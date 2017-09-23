@@ -940,6 +940,7 @@
 
             if (botCreatorIDs.indexOf(user.id) > -1) {
               console.log(true);
+                API.sendChat('@'+user.username+' '+' has arrived!:fire::sparkles::sparkles:');
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
               console.log(botCreatorIDs);
