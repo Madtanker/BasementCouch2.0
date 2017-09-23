@@ -1525,7 +1525,7 @@
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
             //socket();
-            API.chatLog('BasementCouch' + 'v' + basicBot.version);
+            API.chatLog('BasementCouch v' + basicBot.version);
         },
 
 /*
