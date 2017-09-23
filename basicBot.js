@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209, 3532061];
 
     var basicBot = {
-        version: '2.0.0',
+        version: '2.0.1',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -3268,7 +3268,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.chatLog('Rebooting');
+                        API.sendChat(subChat(basicBot.chat.reload));
                         //sendToSocket();
                         storeToStorage();
                         basicBot.disconnectAPI();
