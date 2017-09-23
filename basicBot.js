@@ -1506,9 +1506,9 @@
             basicBot.status = true;
             API.sendChat('/cap ' + basicBot.settings.startupCap);
             API.setVolume(basicBot.settings.startupVolume);
-            if (basicBot.settings.autowoot) {
-                $('#woot').click();
-            }
+            //if (basicBot.settings.autowoot) {
+                //$('#woot').click();
+            //}
             if (basicBot.settings.startupEmoji) {
                 var emojibuttonoff = $('.icon-emoji-off');
                 if (emojibuttonoff.length > 0) {
