@@ -266,20 +266,20 @@
             startupCap: 200, // 1-200
             startupVolume: null, // 0-100
             startupEmoji: true, // true or false
-            autowoot: false,
+            autowoot: null,
             autoskip: true,
             smartSkip: true,
             cmdDeletion: true,
             maximumAfk: 120,
             afkRemoval: false,
-            maximumDc: 30,
+            maximumDc: 60,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
             lockGuard: false,
             maximumLocktime: 10,
-            cycleGuard: true,
-            maximumCycletime: 10,
+            cycleGuard: false,
+            maximumCycletime: null,
             voteSkip: true,
             voteSkipLimit: 4,
             historySkip: true,
@@ -1525,7 +1525,7 @@
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
             //socket();
-            API.chatLog('BasementCouch.' + basicBot.version);
+            API.chatLog('BasementCouch' + 'v' + basicBot.version);
         },
 
 /*
