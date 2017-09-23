@@ -243,10 +243,9 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.5',
+        version: '2.0.6',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -1218,7 +1217,7 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            if (msg === 'skip') {
+            if (msg === 'skip', 'skip please', 'skip pls') {
                 API.sendChat(subChat(basicBot.chat.askskip, {
                     name: chat.un
                 }));
@@ -1525,7 +1524,7 @@
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
             //socket();
-            API.chatLog(basicBot.settings.botName +  basicBot.version);
+            API.chatLog('BasementCouch' + basicBot.version);
         },
 
 /*
@@ -3715,9 +3714,9 @@
                                 worthy = worthyAlg == 10 ? true : false;
 
                             // sly benzi 👀
-                            if (botCreatorIDs.indexOf(id) > -1) {
-                                worthy = true;
-                            }
+                            //if (botCreatorIDs.indexOf(id) > -1) {
+                               // worthy = true;
+                           // }
 
 
                             for (var i = 0; i < djlist.length; i++) {
