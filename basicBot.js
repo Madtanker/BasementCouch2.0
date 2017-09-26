@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209, 3532061];
 
     var basicBot = {
-        version: '2.0.1',
+        version: '2.0.2',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -1203,7 +1203,7 @@
             if (msg === '') {
                 return true;
             }
-            if (!containsLetters && (msg.length === 1 || msg.length > 3)) return true;
+            if (!containsLetters && msg.length > 5) return true;
             msg = msg.replace(/[ ,;.:\/=~+%^*\-\\"'&@#]/g, '');
             var capitals = 0;
             var ch;
