@@ -243,10 +243,10 @@
 
     var botCreator = 'Yemasthui';
     var botMaintainer = 'Benzi';
-    var botCreatorIDs = [3851534, 4105209, 3532061];
+    var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.8',
+        version: '2.0.9',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -937,9 +937,17 @@
             }
             console.log(user);
             if (botCreatorIDs.indexOf(user.id) > -1) {
-                API.sendChat('@'+user.username+' '+' has arrived!:fire::sparkles:');
-            }else if (user.role === 2000) {
-                API.sendChat ( '@'+user.username+' '+' Everyone behave a bouncer is here!'); 
+                API.sendChat('@'+user.username+' '+' < Thank this guy for creating/maintaining the original me:bow::sparkles:');
+            } else if (user.role === 1000) {
+                API.sendChat ('@'+user.username+' '+'This guy makes music ask them where to find them.:thumbsup:') 
+            } else if (user.role === 2000) {
+                API.sendChat ('@'+user.username+' '+' Everyone behave a bouncer is here!:sweat:');
+            } else if (user.role === 3000) {
+                API.sendChat ('@'+user.username+' '+' A more important person has arrived');
+            } else if (user.role === 4000) {
+                API.sendChat ('@'+user.username+' '+'What?! im being run by someone else?!:thinking_face:');
+            } else if (user.role === 5000) {
+                API.sendChat ('@'+user.username+' '+'Has arrived!:fire::sparkles:');
             } else if (welcomeback) {
                 API.sendChat(subChat(basicBot.chat.welcomeback, {
                     name: user.username
