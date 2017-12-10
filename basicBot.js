@@ -939,7 +939,7 @@
             if (botCreatorIDs.indexOf(user.id) > -1) {
               console.log(true);
                 API.sendChat('@'+user.username+' '+' has arrived!:fire::sparkles:');
-            else if (basicBot.roomUtilities.rankToNumber === 2)
+                else if (basicBot.roomUtilities.rankToNumber === 2) {
                 API.sendChat ( '@'+user.username+' '+' Everyone behave a bouncer is here!'); 
             } else if (basicBot.settings.welcome && greet) {
               console.log(false);
