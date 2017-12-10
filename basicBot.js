@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209, 3532061];
 
     var basicBot = {
-        version: '2.0.7',
+        version: '2.0.8',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -938,7 +938,7 @@
             console.log(user);
             if (botCreatorIDs.indexOf(user.id) > -1) {
                 API.sendChat('@'+user.username+' '+' has arrived!:fire::sparkles:');
-            }else if (user.role === 2) {
+            }else if (user.role === 2000) {
                 API.sendChat ( '@'+user.username+' '+' Everyone behave a bouncer is here!'); 
             } else if (welcomeback) {
                 API.sendChat(subChat(basicBot.chat.welcomeback, {
