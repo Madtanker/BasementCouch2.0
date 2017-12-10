@@ -943,7 +943,7 @@
             } else if (user.role === 2000) {
                 API.sendChat ('@'+user.username+' '+' Everyone behave a bouncer is here!:sweat:');
             } else if (user.role === 3000) {
-                API.sendChat ('@'+user.username+' '+' A more important person has arrived');
+                API.sendChat ('@'+user.username+' '+' A more important person has arrived:open_mouth:');
             } else if (user.role === 4000) {
                 API.sendChat ('@'+user.username+' '+'What?! im being run by someone else?!:thinking_face:');
             } else if (user.role === 5000) {
@@ -1828,7 +1828,7 @@
                 }
             },
 
-            autowootCommand: {
+            /*autowootCommand: {
                 command: 'autowoot',
                 rank: 'user',
                 type: 'exact',
@@ -1839,7 +1839,7 @@
                         API.sendChat(basicBot.chat.autowoot);
                     }
                 }
-            },
+            },*/
 
             baCommand: {
                 command: 'ba',
