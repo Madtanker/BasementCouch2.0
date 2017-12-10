@@ -937,24 +937,17 @@
             }
 
             if (botCreatorIDs.indexOf(user.id) > -1) {
-              console.log(true);
                 API.sendChat('@'+user.username+' '+' has arrived!:fire::sparkles:');
-                else if (basicBot.roomUtilities.rankToNumber === 2) {
+            }else if (user.role === 2) {
                 API.sendChat ( '@'+user.username+' '+' Everyone behave a bouncer is here!'); 
-            } else if (basicBot.settings.welcome && greet) {
-              console.log(false);
-              console.log(botCreatorIDs);
-                welcomeback ?
-                    setTimeout(function(user) {
-                        API.sendChat(subChat(basicBot.chat.welcomeback, {
-                            name: user.username
-                        }));
-                    }, 1 * 1000, user) :
-                    setTimeout(function(user) {
-                        API.sendChat(subChat(basicBot.chat.welcome, {
-                            name: user.username
-                        }));
-                    }, 1 * 1000, user);
+            } else if (welcomeback) {
+                API.sendChat(subChat(basicBot.chat.welcomeback,
+                    name: user.username
+                }));
+            } else {
+                API.sendChat(subChat(basicBot.chat.welcome, {
+                    name: user.username
+                }));
             }
         },
         eventUserleave: function(user) {
