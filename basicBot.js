@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.9',
+        version: '2.0.1',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -939,7 +939,7 @@
             if (botCreatorIDs.indexOf(user.id) > -1) {
                 API.sendChat('@'+user.username+' '+' < Thank this guy for creating/maintaining the original me:bow::sparkles:');
             } else if (user.role === 1000) {
-                API.sendChat ('@'+user.username+' '+'This guy makes music ask them where to find them.:thumbsup:') 
+                API.sendChat ('@'+user.username+' '+'DJ in the House!:thumbsup:') 
             } else if (user.role === 2000) {
                 API.sendChat ('@'+user.username+' '+' Everyone behave a bouncer is here!:sweat:');
             } else if (user.role === 3000) {
