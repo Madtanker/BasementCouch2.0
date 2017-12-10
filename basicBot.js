@@ -935,7 +935,7 @@
                 }
 
             }
-
+            console.log(user);
             if (botCreatorIDs.indexOf(user.id) > -1) {
                 API.sendChat('@'+user.username+' '+' has arrived!:fire::sparkles:');
             }else if (user.role === 2) {
