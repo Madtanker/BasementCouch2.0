@@ -246,7 +246,7 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.1',
+        version: '2.0.2',
         status: false,
         name: 'BasementCouch',
         loggedInID: null,
@@ -1828,7 +1828,7 @@
                 }
             },
 
-            /*autowootCommand: {
+            autowootCommand: {
                 command: 'autowoot',
                 rank: 'user',
                 type: 'exact',
@@ -1839,7 +1839,7 @@
                         API.sendChat(basicBot.chat.autowoot);
                     }
                 }
-            },*/
+            },
 
             baCommand: {
                 command: 'ba',
