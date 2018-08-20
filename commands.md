@@ -1,4 +1,4 @@
-# Commands List
+# Commands Linist
 
 - **X** specifies a number
 - Arguments between **( )** are optional
