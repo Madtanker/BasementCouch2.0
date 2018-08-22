@@ -90,7 +90,7 @@
     "askskip": "\/me @%%NAME%%, neden gecildigini sormayin.",
     "spam": "\/me @%%NAME%%, lutfen spam yapmayin.",
     "roomadvertising": "\/me @%%NAME%%, diger odalarin reklamini yapmayin.",
-    "adfly": "\/me @%%NAME%%, lutfen otowootunuzu degistirin. Onerilen: http:\/\/plugcubed.net\/",
+    "adfly": "\/me @%%NAME%%, lutfen otowootunuzu degistirin. Onerilen RCS: http:\/\/rcs.radiant.dj\/ ,PlugCubed: http:\/\/plugcubed.net\/ , TastyPlug: http\/\/tastyplug.tastycat.org\/",
     "validgiftags": "/me [@%%NAME%%] [Etiketler: %%TAGS%%] http://i.giphy.com/%%ID%%.gif",
     "invalidgiftags": "/me [@%%NAME%%] [Etiket: %%TAGS%%] gecersiz etiket, baska etiket deneyin.",
     "validgifrandom": "/me [@%%NAME%%] [Rastgele GIF] http://i.giphy.com/%%ID%%.gif",

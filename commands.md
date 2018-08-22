@@ -1,4 +1,4 @@
-# Commands List
+# Commands Linist
 
 - **X** specifies a number
 - Arguments between **( )** are optional
@@ -96,7 +96,7 @@
 | Command | Arguments | Description |
 |:-------:|:---------:|:-----------:|
 | !8ball / !ask | (message) | ask the bot a question, the bot will return random variations of a yes or no answer. |
-| !autowoot | — | links to PlugCubed, the advised script/plugin to use for autowooting. |
+| !autowoot | — | links to RCS,Plugcubed and TastyPlug, the advised scripts/plugins to use for autowooting. |
 | !ba | — | explains the Brand Ambassador rank. |
 | !commands | — | gives a link to the commands. |
 | !cookie | (@user) | give a cookie to user. |
