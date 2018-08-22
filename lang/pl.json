@@ -90,7 +90,7 @@
     "askskip": "/me @%%NAME%%, nie proś o skipy.",
     "spam": "\/me @%%NAME%%, nie spamuj.",
     "roomadvertising": "\/me @%%NAME%%, nie podawaj link\u00f3w do innych spo\u0142eczno\u015bci.",
-    "adfly": "\/me @%%NAME%%, zmie\u0144 sw\u00f3j program do autowoot\u00f3w. Polecamy RCS: http:\/\/rcs.radiant.dj\/ ,PlugCubed: http:\/\/plugcubed.net\/ , TastyPlug: http\/\/tastyplug.tastycat.org\/",
+    "adfly": "\/me @%%NAME%%, zmie\u0144 sw\u00f3j program do autowoot\u00f3w. Polecamy PlugCubed: http:\/\/plugcubed.net\/",
     "validgiftags": "/me [@%%NAME%%] [Tagi: %%TAGS%%] http://i.giphy.com/%%ID%%.gif",
     "invalidgiftags": "/me [@%%NAME%%] [Tagi: %%TAGS%%] Błędne tagi, spróbuj innych.",
     "validgifrandom": "/me [@%%NAME%%] [Losowy GIF] http://i.giphy.com/%%ID%%.gif",

@@ -90,7 +90,7 @@
     "askskip": "\/me @%%NAME%%, ne tra\u017ei skip.",
     "spam": "\/me @%%NAME%%, molim, ne spamaj.",
     "roomadvertising": "\/me @%%NAME%%, ne postavljaj linkove drugih soba.",
-    "adfly": "\/me @%%NAME%%, promeni tvoj autowoot program. Mi preporu\u010dujemo RCS: http:\/\/rcs.radiant.dj\/ ,PlugCubed: http:\/\/plugcubed.net\/ , TastyPlug: http\/\/tastyplug.tastycat.org\/",
+    "adfly": "\/me @%%NAME%%, promeni tvoj autowoot program. Mi preporu\u010dujemo PlugCubed: http:\/\/plugcubed.net\/",
     "validgiftags": "/me [@%%NAME%%] [Oznaka: %%TAGS%%] http://i.giphy.com/%%ID%%.gif",
     "invalidgiftags": "/me [@%%NAME%%] [Oznaka: %%TAGS%%] Pogrešna oznaka, pokušaj nešto drugo.",
     "validgifrandom": "/me [@%%NAME%%] [Slučajno odabran GIF] http://i.giphy.com/%%ID%%.gif",

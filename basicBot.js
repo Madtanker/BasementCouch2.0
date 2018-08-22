@@ -112,7 +112,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get('https://rawgit.com/Madtanker/BasementCouch2.0/master/lang/langIndex.json', function(json) {
+        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -176,9 +176,8 @@
                 API.chatLog(basicBot.chat.datarestored);
             }
         }
-        /*var json_sett = null;
-        var roominfo = document.getElementById('room-settings');
-        info = roominfo.textContent;
+        var json_sett = null;
+        var info = _.find(require.s.contexts._.defined, (m) => m && m.attributes && 'hostID' in m.attributes).get('description');
         var ref_bot = '@basicBot=';
         var ind_ref = info.indexOf(ref_bot);
         if (ind_ref > 0) {
@@ -195,7 +194,7 @@
                     }
                 }
             });
-        }*/
+        }
 
     };
 
@@ -246,52 +245,52 @@
     var botCreatorIDs = [3851534, 4105209];
 
     var basicBot = {
-        version: '2.0.2',
+        version: '2.12.1',
         status: false,
-        name: 'BasementCouch',
+        name: 'basicBot',
         loggedInID: null,
-        scriptLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/basicBot.js',
-        cmdLink: 'https://git.io/v5pmG',
-        chatLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/lang/en.json',
+        scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+        cmdLink: 'http://git.io/245Ppg',
+        chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'BasementCouch',
+            botName: 'basicBot',
             language: 'english',
-            chatLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/lang/en.json',
-            scriptLink: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/basicBot.js',
+            chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
+            scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
-            startupCap: 200, // 1-200
-            startupVolume: null, // 0-100
-            startupEmoji: true, // true or false
-            autowoot: null,
-            autoskip: true,
+            startupCap: 1, // 1-200
+            startupVolume: 0, // 0-100
+            startupEmoji: false, // true or false
+            autowoot: true,
+            autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
             maximumAfk: 120,
-            afkRemoval: false,
+            afkRemoval: true,
             maximumDc: 60,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
             lockGuard: false,
             maximumLocktime: 10,
-            cycleGuard: false,
-            maximumCycletime: null,
-            voteSkip: true,
-            voteSkipLimit: 4,
-            historySkip: true,
+            cycleGuard: true,
+            maximumCycletime: 10,
+            voteSkip: false,
+            voteSkipLimit: 10,
+            historySkip: false,
             timeGuard: true,
             strictTimeGuard: true,
             maximumSongLength: 10,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            thorCommand: true,
+            thorCommand: false,
             thorCooldown: 10,
-            skipPosition: null,
+            skipPosition: 3,
             skipReasons: [
                 ['theme', 'This song does not fit the room theme. '],
                 ['op', 'This song is on the OP list. '],
@@ -301,61 +300,28 @@
                 ['nsfw', 'The song you contained was NSFW (image or sound). '],
                 ['unavailable', 'The song you played was not available for some users. ']
             ],
-            afkpositionCheck: 3,
-            afkRankCheck: 'user',
+            afkpositionCheck: 15,
+            afkRankCheck: 'ambassador',
             motdEnabled: false,
             motdInterval: 5,
-            motd: 'Welcome to the EDM Basement! We play Electronic Dance Music (EDM), Techno, House, Chill, Funk, Dubstep, Drum and Bass, Etc. Sorry, NO Hardstyle or Hardcore. http://www.theedmbasement.com/ ',
+            motd: 'Temporary Message of the Day',
             filterChat: true,
             etaRestriction: false,
             welcome: true,
             opLink: null,
-            rulesLink: 'http://www.theedmbasement.com/',
+            rulesLink: null,
             themeLink: null,
-            fbLink: 'https://www.facebook.com/TheEDMBasement',
+            fbLink: null,
             youtubeLink: null,
-            website: 'http://www.theedmbasement.com/',
-            intervalMessages: [
-                            //"Fun Fact: When possums are playing ‘possum’, they are not \“playing.\” They actually pass out from sheer terror. ",
-                            //"Fun Fact: Plug.dj was first released on February 29th, \"a leap day\".",
-                            //"Please remember to WOOT/MEH while in the Waitlist.",
-                            //"Fun Fact: Most people yawn wher they read the word \"yawn\" or \"yawning\". \:trollface\:",
-                            //"Fun Fact: North Korea uses a fax machine to send threats to South Korea.",
-                            //"Fun Fact: It took the inventor of the Rubik’s cube one month before he was able to solve the Cube for himself.",
-                            //"If you accidently disconnect you can type \"!dc\" to get your spot in the waitlist back.",
-                            //"Fun Fact: Sea otters hold hands when they sleep to keep from drifting apart.",
-                            //"Fun Fact: When you were born, you were, for a moment, the youngest person on earth.",
-                            //"Fun Fact: The elements that we are composed of were formed in the interiors of collapsing stars. We are all made of star dust.",
-                            //"Fun Fact: Cows have best friends.",
-                            //"Fun Fact: Turtles can breathe through their butts.",
-                            //"Fun Fact: Norway knighted a penguin.",
-                            //"Fun Fact: In China, killing a Panda is punishable by death.",
-                            //"Fun Fact: Houseflies don’t allow their short lifespans (14 days) to hinder their musical abilities. They always hum in the key of F.",
-                            //"Fun Fact: If you lift a kangaroo’s tail off the ground, it can’t hop.",
-                            //"Fun Fact: Fleas can jump up to 200 times their height. This is equivalent to a man jumping the Empire State Building in New York.",
-                            //"Fun Fact: There are one million ants for every human in the world.",
-                            //"Fun Fact: Ants never sleep and don’t have lungs",
-                            //"Fun Fact: Elephants are one of the three mammals that undergo menopause – the other two being humpback whales and human females.",
-                            //"Fun Fact: Dogs’ nose prints are as unique as human fingerprints and can be used to identify them.",
-                            //"Fun Fact: The Hawaiian alphabet has only 12 letters.",
-                            //"Fun Fact: A donkey can sink into quicksand but a mule can’t.",
-                            //"Fun Fact: The words \"facetious\" and \"abstemious\" contain all the vowels in their correct order.",
-                            //"Fun Fact: The \"Sixth Sick Sheik’s Sixth Sheep’s Sick\" is the hardest tongue-twister.",
-                            //"Fun Fact: Albert Einstein never wore any socks.",
-                            //"Fun Fact: A flamingo can eat only when its head is upside down.",
-                            //"Fun Fact: It is physically impossible for pigs to look up at the sky.",
-                            //"Fun Fact: The shortest war on record, between Britain and Zanzibar in 1896, lasted just 38 minutes.",
-                            //"Fun Fact: An octopus has 3 hearts.",
-                            //"Fun Fact: If the population of China walked past you in single file, the line would never end because of the rate of reproduction.",
-                            //"Fun Fact:\"Typewriter\" is the longest word that can be made only using one row on the keyboard."
-                            ],
+            website: null,
+            intervalMessages: [],
             messageInterval: 5,
-            songstats: false,
+            songstats: true,
             commandLiteral: '!',
             blacklists: {
-                NSFW: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/blacklists/NSFWlist.json',
-                OP: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/blacklists/OPlist.json',
-                BANNED: 'https://rawgit.com/Madtanker/BasementCouch2.0/master/blacklists/BANNEDlist.json'
+                NSFW: 'https://rawgit.com/basicBot/custom/master/blacklists/NSFWlist.json',
+                OP: 'https://rawgit.com/basicBot/custom/master/blacklists/OPlist.json',
+                BANNED: 'https://rawgit.com/basicBot/custom/master/blacklists/BANNEDlist.json'
             }
         },
         room: {
@@ -827,13 +793,12 @@
                     var msg;
                     if (basicBot.settings.motdEnabled) {
                         msg = basicBot.settings.motd;
-                        API.sendChat('/me ' + msg);
-                    } //else {
-                        //if (basicBot.settings.intervalMessages.length === 0) return void(0);
-                        //var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
-                        //msg = basicBot.settings.intervalMessages[messageNumber];
-                    //}
-                    
+                    } else {
+                        if (basicBot.settings.intervalMessages.length === 0) return void(0);
+                        var messageNumber = basicBot.room.roomstats.songCount % basicBot.settings.intervalMessages.length;
+                        msg = basicBot.settings.intervalMessages[messageNumber];
+                    }
+                    API.sendChat('/me ' + msg);
                 }
             },
             updateBlacklists: function() {
@@ -937,27 +902,24 @@
                 }
 
             }
-            console.log(user);
+
             if (botCreatorIDs.indexOf(user.id) > -1) {
-                API.sendChat('@'+user.username+' '+' < Thank this guy for creating/maintaining the original me:bow::sparkles:');
-            } else if (user.role === 1000) {
-                API.sendChat ('@'+user.username+' '+'DJ in the House!:thumbsup:') 
-            } else if (user.role === 2000) {
-                API.sendChat ('@'+user.username+' '+' Everyone behave a bouncer is here!:sweat:');
-            } else if (user.role === 3000) {
-                API.sendChat ('@'+user.username+' '+' A more important person has arrived:open_mouth:');
-            } else if (user.role === 4000) {
-                API.sendChat ('@'+user.username+' '+'What?! im being run by someone else?!:thinking_face:');
-            } else if (user.role === 5000) {
-                API.sendChat ('@'+user.username+' '+'Has arrived!:fire::sparkles:');
-            } else if (welcomeback) {
-                API.sendChat(subChat(basicBot.chat.welcomeback, {
-                    name: user.username
-                }));
-            } else {
-                API.sendChat(subChat(basicBot.chat.welcome, {
-                    name: user.username
-                }));
+              console.log(true);
+                API.sendChat('@'+user.username+' '+':sparkles: :bow: :sparkles:');
+            } else if (basicBot.settings.welcome && greet) {
+              console.log(false);
+              console.log(botCreatorIDs);
+                welcomeback ?
+                    setTimeout(function(user) {
+                        API.sendChat(subChat(basicBot.chat.welcomeback, {
+                            name: user.username
+                        }));
+                    }, 1 * 1000, user) :
+                    setTimeout(function(user) {
+                        API.sendChat(subChat(basicBot.chat.welcome, {
+                            name: user.username
+                        }));
+                    }, 1 * 1000, user);
             }
         },
         eventUserleave: function(user) {
@@ -1015,10 +977,11 @@
             }
         },
         eventDjadvance: function(obj) {
-            /*if (!obj.dj) return;
+            if (!obj.dj) return;
             if (basicBot.settings.autowoot) {
                 $('#woot').click(); // autowoot
-            }*/
+            }
+
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
             for (var i = 0; i < basicBot.room.users.length; i++) {
                 if (basicBot.room.users[i].id === user.id) {
@@ -1053,7 +1016,6 @@
             basicBot.room.currentDJID = obj.dj.id;
 
             var blacklistSkip = setTimeout(function() {
-                console.log(obj.media);
                 var mid = obj.media.format + ':' + obj.media.cid;
                 for (var bl in basicBot.room.blacklists) {
                     if (basicBot.settings.blacklistEnabled) {
@@ -1216,7 +1178,7 @@
             if (msg === '') {
                 return true;
             }
-            if (!containsLetters && msg.length > 5) return true;
+            if (!containsLetters && (msg.length === 1 || msg.length > 3)) return true;
             msg = msg.replace(/[ ,;.:\/=~+%^*\-\\"'&@#]/g, '');
             var capitals = 0;
             var ch;
@@ -1231,7 +1193,7 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            if (msg === 'skip'){
+            if (msg === 'skip') {
                 API.sendChat(subChat(basicBot.chat.askskip, {
                     name: chat.un
                 }));
@@ -1519,9 +1481,9 @@
             basicBot.status = true;
             API.sendChat('/cap ' + basicBot.settings.startupCap);
             API.setVolume(basicBot.settings.startupVolume);
-            //if (basicBot.settings.autowoot) {
-                //$('#woot').click();
-            //}
+            if (basicBot.settings.autowoot) {
+                $('#woot').click();
+            }
             if (basicBot.settings.startupEmoji) {
                 var emojibuttonoff = $('.icon-emoji-off');
                 if (emojibuttonoff.length > 0) {
@@ -1538,7 +1500,10 @@
             API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
             API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
             //socket();
-            API.chatLog('BasementCouch v' + basicBot.version);
+            loadChat(API.sendChat(subChat(basicBot.chat.online, {
+                botname: basicBot.settings.botName,
+                version: basicBot.version
+            })));
         },
         commands: {
             executable: function(minRank, chat) {
@@ -2779,12 +2744,12 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://rawgit.com/Madtanker/BasementCouch2.0/master/lang/langIndex.json', function(json) {
+                        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
                                 API.sendChat(subChat(basicBot.chat.langerror, {
-                                    link: 'https://git.io/vofY5'
+                                    link: 'http://git.io/vJ9nI'
                                 }));
                             } else {
                                 basicBot.settings.language = argument;
@@ -3266,7 +3231,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void(0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void(0);
                     else {
-                        API.sendChat(subChat(basicBot.chat.reload));
+                        API.sendChat(basicBot.chat.reload);
                         //sendToSocket();
                         storeToStorage();
                         basicBot.disconnectAPI();
@@ -3684,7 +3649,7 @@
                     else {
                         if (typeof basicBot.settings.themeLink === 'string')
                             API.sendChat(subChat(basicBot.chat.genres, {
-                                //link: basicBot.settings.themeLink
+                                link: basicBot.settings.themeLink
                             }));
                     }
                 }
@@ -3713,9 +3678,9 @@
                                 worthy = worthyAlg == 10 ? true : false;
 
                             // sly benzi 👀
-                            //if (botCreatorIDs.indexOf(id) > -1) {
-                               // worthy = true;
-                           // }
+                            if (botCreatorIDs.indexOf(id) > -1) {
+                                worthy = true;
+                            }
 
 
                             for (var i = 0; i < djlist.length; i++) {

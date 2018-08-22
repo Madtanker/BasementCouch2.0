@@ -90,7 +90,7 @@
     "askskip": "\/me @%%NAME%%, ne demandez pas de passer une musique.",
     "spam": "\/me @%%NAME%%, merci de ne pas spammer.",
     "roomadvertising": "\/me @%%NAME%%, ne postez pas de liens menant vers d'autres salles.",
-    "adfly": "\/me @%%NAME%%, merci de changer votre programme d'Autowoot. Nous vous sugg\u00e9rons RCS: http:\/\/rcs.radiant.dj\/ ,PlugCubed: http:\/\/plugcubed.net\/ , TastyPlug: http\/\/tastyplug.tastycat.org\/",
+    "adfly": "\/me @%%NAME%%, merci de changer votre programme d'Autowoot. Nous vous sugg\u00e9rons PlugCubed : http:\/\/plugcubed.net\/",
     "validgiftags": "/me [@%%NAME%%] [Tags: %%TAGS%%] http://i.giphy.com/%%ID%%.gif",
     "invalidgiftags": "/me [@%%NAME%%] [Tags : %%TAGS%%] Tags invalides, essayez-en d'autres.",
     "validgifrandom": "/me [@%%NAME%%] [GIF Aléatoire] http://i.giphy.com/%%ID%%.gif",
