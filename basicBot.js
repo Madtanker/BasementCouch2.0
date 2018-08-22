@@ -178,7 +178,6 @@
         }
         var json_sett = null;
         var info = _.find(require.s.contexts._.defined, (m) => m && m.attributes && 'hostID' in m.attributes).get('description');
-        info = roominfo.textContent;
         var ref_bot = '@basicBot=';
         var ind_ref = info.indexOf(ref_bot);
         if (ind_ref > 0) {
